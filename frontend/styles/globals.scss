@@ -7,186 +7,357 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-display: swap;
-    font-family: "Extatica";
-    src: url("./fonts/Extatica-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-  }
-  @font-face {
-    font-display: swap;
-    font-family: "Extatica";
-    src: url("./fonts/Extatica-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 500;
-  }
-  @font-face {
-    font-display: swap;
-    font-family: "Extatica";
-    src: url("./fonts/Extatica-SemiBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 600;
-  }
-  @font-face {
-    font-display: swap;
-    font-family: "Evolventa";
-    src: url("./fonts/Evolventa-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-  }
-  @font-face {
-    font-display: swap;
-    font-family: "Evolventa";
-    src: url("./fonts/Evolventa-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700;
-  }
+	@font-face {
+		font-display: swap;
+		font-family: 'Extatica';
+		src: url('./fonts/Extatica-Regular.ttf') format('truetype');
+		font-style: normal;
+		font-weight: 400;
+	}
+	@font-face {
+		font-display: swap;
+		font-family: 'Extatica';
+		src: url('./fonts/Extatica-Medium.ttf') format('truetype');
+		font-style: normal;
+		font-weight: 500;
+	}
+	@font-face {
+		font-display: swap;
+		font-family: 'Extatica';
+		src: url('./fonts/Extatica-SemiBold.ttf') format('truetype');
+		font-style: normal;
+		font-weight: 600;
+	}
+	@font-face {
+		font-display: swap;
+		font-family: 'Evolventa';
+		src: url('./fonts/Evolventa-Regular.ttf') format('truetype');
+		font-style: normal;
+		font-weight: 400;
+	}
+	@font-face {
+		font-display: swap;
+		font-family: 'Evolventa';
+		src: url('./fonts/Evolventa-Bold.ttf') format('truetype');
+		font-style: normal;
+		font-weight: 700;
+	}
 
-  html {
-    @apply font-ex font-medium bg-white text-black
-  }
+	html {
+		@apply bg-white font-ex font-medium text-black;
+	}
 
-  body {
-    @apply bg-milk
-  }
+	h1 {
+		@apply font-ex text-8xl font-normal tracking-normal lg:text-10xl xl:text-12xl;
+	}
 
-  h1 {
-    @apply font-ex font-normal text-8xl lg:text-10xl xl:text-12xl tracking-normal
-  }
+	h2 {
+		@apply font-ex text-11xl font-normal tracking-normal;
+	}
 
-  h2 {
-    @apply font-ex font-normal text-11xl tracking-normal
-  }
+	h3 {
+		@apply font-ex text-10xl font-normal uppercase tracking-normal;
+	}
 
-  h3 {
-    @apply font-ex font-normal text-10xl tracking-normal uppercase
-  }
+	h4 {
+		@apply font-ex text-lg font-medium uppercase tracking-normal xs:text-2xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl 3xl:text-9xl;
+	}
 
-  h4 {
-    @apply font-ex font-medium text-lg xs:text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-7xl 3xl:text-9xl tracking-normal uppercase
-  }
+	h5 {
+		@apply font-ex text-base font-medium uppercase tracking-normal xs:text-lg md:text-xl lg:text-2xl xl:text-4xl 2xl:text-6xl 3xl:text-8xl;
+	}
 
-  h5 {
-    @apply font-ex font-medium text-base xs:text-lg md:text-xl lg:text-2xl xl:text-4xl 2xl:text-6xl 3xl:text-8xl tracking-normal uppercase
-  }
+	h6 {
+		@apply font-ex text-xl font-medium uppercase tracking-normal md:text-2xl lg:text-3xl xl:text-5xl 3xl:text-7xl;
+	}
 
-  h6 {
-    @apply font-ex font-medium text-xl md:text-2xl lg:text-3xl xl:text-5xl 3xl:text-7xl tracking-normal uppercase
-  }
-
-  ul, ol {
-    list-style: revert;
-  }
+	ul,
+	ol {
+		list-style: revert;
+	}
 }
 
 @layer components {
-  .t1 {
-    @apply font-ex font-medium text-base lg:text-xl xl:text-2xl 2xl:text-6xl tracking-normal uppercase
-  }
+	.t1 {
+		@apply font-ex text-base font-medium uppercase tracking-normal lg:text-xl xl:text-2xl 2xl:text-6xl;
+	}
 
-  .t1-lowercase {
-    @apply font-ex font-medium text-base lg:text-xl xl:text-2xl 2xl:text-6xl tracking-normal
-  }
+	.t1-lowercase {
+		@apply font-ex text-base font-medium tracking-normal lg:text-xl xl:text-2xl 2xl:text-6xl;
+	}
 
-  .t2 {
-    @apply font-ex font-medium text-base lg:text-2xl 2xl:text-2xl 3xl:text-5xl tracking-normal uppercase
-  }
+	.t2 {
+		@apply font-ex text-base font-medium uppercase tracking-normal lg:text-2xl 2xl:text-2xl 3xl:text-5xl;
+	}
 
-  .t3 {
-    @apply font-ex font-semibold text-xl md:text-2xl xl:text-4xl tracking-normal
-  }
+	.t3 {
+		@apply font-ex text-md text-xl font-semibold tracking-normal lg:text-2xl xl:text-4xl;
+	}
 
-  /*font-weight: 600 (semibold)*/
-  .t4 {
-    @apply font-ex font-semibold text-xl lg:text-2xl 3xl:text-3xl tracking-normal uppercase
-  }
+	/*font-weight: 600 (semibold)*/
+	.t4 {
+		@apply font-ex text-xl font-semibold uppercase tracking-normal lg:text-2xl 3xl:text-3xl;
+	}
 
-  /*font-weight: 500 (medium)*/
-  .t4-medium {
-    @apply font-ex font-medium text-3xl tracking-normal uppercase
-  }
+	/*font-weight: 500 (medium)*/
+	.t4-medium {
+		@apply font-ex text-3xl font-medium uppercase tracking-normal;
+	}
 
-  .t5 {
-    @apply font-ex font-medium text-sm sm:text-base 2xl:text-lg 3xl:text-2xl tracking-normal uppercase
-  }
+	.t5 {
+		@apply font-ex text-sm font-medium uppercase tracking-normal sm:text-base 2xl:text-lg 3xl:text-2xl;
+	}
 
-  /*font-weight: 600 (semibold)*/
-  .t6 {
-    @apply font-ex font-semibold text-sm xl:text-xl tracking-normal
-  }
+	/*font-weight: 600 (semibold)*/
+	.t6 {
+		@apply font-ex text-sm font-semibold tracking-normal xl:text-xl;
+	}
 
-  /*font-weight: 500 (medium)*/
-  .t6-medium {
-    @apply font-ex font-medium text-base xl:text-base 2xl:text-xl tracking-normal
-  }
+	/*font-weight: 500 (medium)*/
+	.t6-medium {
+		@apply font-ex text-2xxs font-medium tracking-normal xl:text-base 2xl:text-xl;
+	}
 
-  /*font-weight: 400 (normal)*/
-  .t6-normal {
-    @apply font-ex font-normal text-xl tracking-normal
-  }
+	/*font-weight: 400 (normal)*/
+	.t6-normal {
+		@apply font-ex text-xl font-normal tracking-normal;
+	}
 
-  .t7 {
-    @apply font-ev font-normal text-xxs xs:text-xs lg:text-sm 3xl:text-lg tracking-normal
-  }
+	.t7 {
+		@apply font-ev text-xxs font-normal tracking-normal xs:text-xs lg:text-sm 3xl:text-lg;
+	}
 
-  .t8 {
-    @apply font-ev font-normal text-xs md:text-sm 3xl:text-md tracking-normal
-  }
+	.t8 {
+		@apply font-ev text-xs font-normal tracking-normal md:text-sm 3xl:text-md;
+	}
 
-  .t9 {
-    @apply font-ev font-medium text-2xxs lg:text-sm 3xl:text-base tracking-normal
-  }
+	.t9 {
+		@apply font-ev text-2xxs font-medium tracking-normal lg:text-sm 3xl:text-base;
+	}
 
-  .t10 {
-    @apply font-ev font-normal text-xxs sm:text-xs lg:text-sm tracking-normal
-  }
+	.t10 {
+		@apply font-ev text-xxs font-normal tracking-normal sm:text-xs lg:text-sm;
+	}
 
-  .t10-min {
-    @apply font-ev font-normal text-2xxs sm:text-xxs lg:text-sm tracking-normal
-  }
+	.t10-min {
+		@apply font-ev text-2xxs font-normal tracking-normal sm:text-xxs lg:text-sm;
+	}
 
-  /* font-weight: 700 (bold)
+	/* font-weight: 700 (bold)
      font-family: Evolventa */
-  .t11-bold {
-    @apply font-ev font-bold text-xs tracking-normal
-  }
+	.t11-bold {
+		@apply font-ev text-xs font-bold tracking-normal;
+	}
 
-  /* font-weight: 500 (medium)
+	/* font-weight: 500 (medium)
      font-family: Extatica */
-  .t11 {
-    @apply font-ex font-medium text-xxs lg:text-xs tracking-normal
-  }
+	.t11 {
+		@apply font-ex text-xxs font-medium tracking-normal lg:text-xs;
+	}
 
-  .t12 {
-    @apply font-ev font-normal text-xxs tracking-normal
-  }
+	.t12 {
+		@apply font-ev text-xxs font-normal tracking-normal;
+	}
 
-  /* font-weight: 500 (medium)
+	/* font-weight: 500 (medium)
      font-family: Extatica */
-  .t13-medium {
-    @apply font-ex font-medium text-2xxs tracking-normal
-  }
+	.t13-medium {
+		@apply font-ex text-2xxs font-medium tracking-normal;
+	}
 
-  /*font-weight: 400 (normal)
+	/*font-weight: 400 (normal)
    font-family: Evolventa */
-  .t13 {
-    @apply font-ev font-normal text-2xxs tracking-normal
-  }
+	.t13 {
+		@apply font-ev text-2xxs font-normal tracking-normal;
+	}
 
-  .title-gutter {
-    @apply mb-6 3xl:mb-16
-  }
+	.title-gutter {
+		@apply mb-6 3xl:mb-16;
+	}
 
-  .section-gutter {
-    @apply my-10 xl:my-12 3xl:my-24
-  }
+	.section-gutter {
+		@apply my-10 xl:my-12 3xl:my-24;
+	}
 
-  .section-gutter__custom {
-    @apply my-6
-  }
+	.section-gutter__custom {
+		@apply my-6;
+	}
 
-  .first-block-gutter {
-    @apply mt-20 2xl:mt-28
-  }
+	.first-block-gutter {
+		@apply mt-20 2xl:mt-28;
+	}
+
+	.filter {
+		&__container {
+			@apply mt-8 flex w-full flex-wrap justify-between gap-8 md:mt-12 md:gap-xl 2xl:flex-nowrap;
+		}
+
+		&__item {
+			@apply w-full md:w-[46%] 2xl:w-[25%] 2xl:max-w-[26.875rem];
+		}
+
+		&__subtitle {
+			@apply t8 opacity-40;
+		}
+
+		&__inner-container {
+			@apply main-filter-parametr flex justify-between gap-[3%];
+		}
+
+		&__result {
+			@apply t8 relative mt-12 hidden justify-center md:flex;
+		}
+	}
+
+	.filter-slider {
+		@apply t7 relative w-full;
+
+		&__field {
+			@apply relative main-filter-parametr main-filter-border flex items-center justify-between gap-[6%] rounded-lg border border-solid px-xl;
+		}
+
+		&__dash {
+			@apply h-6xxs w-xl bg-[#040306];
+		}
+
+		&__slider {
+			@apply absolute bottom-[-25%] right-[3%] w-[94%];
+		}
+	}
+
+	.card {
+		&__container {
+			@apply relative flex h-[24rem] w-full max-w-[21rem] flex-col gap-4xxs rounded-lg border border-solid border-[#040306] px-6 py-lg md:h-[30rem] md:max-w-full md:gap-2 lg:px-10 lg:py-8 xl:h-[35rem] 3xl:h-[40.125rem];
+		}
+
+		&__title {
+			@apply after:mr-16 after:content-[''] xl:after:mr-20;
+		}
+
+		&__old-price {
+			@apply absolute right-0 top-[20%] md:top-[36%];
+		}
+
+		&__image.ant-image-img {
+			@apply m-auto my-6 h-[10.5rem] md:mb-12 md:mt-8 xl:h-[14rem] 3xl:h-[18rem];
+		}
+
+		&__field {
+			@apply opacity-50;
+		}
+
+		&__divider.ant-divider {
+			@apply m-0;
+		}
+
+		&__like-button.ant-btn {
+			@apply right-5 top-lg  h-[2rem]  w-[2rem]  lg:right-6 lg:top-8 lg:h-[2.6rem] lg:w-[2.6rem] xl:right-10 xl:h-[3.438rem] xl:w-[3.438rem];
+
+			svg {
+				@apply h-[0.688rem]  w-[0.688rem] lg:h-[0.8rem]  lg:w-[0.8rem] xl:h-[1.188rem]  xl:w-[1.188rem];
+			}
+		}
+	}
+
+	.list {
+		@apply mt-12 grid grid-cols-1 justify-items-center gap-x-5 gap-y-sm md:grid-cols-2 md:gap-y-4 xl:gap-y-12 2xl:grid-cols-3;
+	}
+
+	.more-btn.ant-btn {
+		@apply w-full rounded-[5px] border-0 bg-[#2495FE] text-white md:w-[36.25rem];
+
+		.ant-btn-icon {
+			@apply order-5 ml-2;
+		}
+	}
+
+	.drawer.ant-drawer {
+		@apply block md:hidden;
+
+		.ant-drawer-header {
+			@apply hidden;
+		}
+		.ant-btn-icon {
+			@apply order-5 ml-2;
+		}
+
+		.ant-drawer-body {
+			@apply flex flex-col p-5;
+		}
+	}
+
+	.drawer {
+		&__close.anticon {
+			@apply self-end;
+
+			svg {
+				@apply h-2xl w-2xl fill-[#444444]/60;
+			}
+		}
+
+		&__apply {
+			@apply more-btn mt-12;
+		}
+	}
+}
+
+@layer generals {
+	.overall-border {
+		@apply m-5  lg:mx-11xl  lg:mb-11xl  lg:mt-8;
+	}
+}
+
+.main-filter-parametr {
+	@apply mt-3 h-6xl w-full;
+}
+
+.main-filter-border {
+	@apply border-[#1E1F22BF]/75;
+}
+
+.centered {
+	@apply flex items-center justify-center;
+}
+
+#filterSelect {
+	.ant-select {
+		@apply main-filter-parametr;
+	}
+
+	.ant-select-selector {
+		@apply main-filter-border t7 px-5;
+	}
+
+	.ant-select-arrow {
+		@apply w-6 text-[0.938rem] text-[#040306];
+	}
+}
+
+#flat-btns {
+	.ant-btn.active {
+		@apply border-[#2495FE] bg-[#2495FE] text-white;
+	}
+}
+.ant-btn {
+	@apply t7 main-filter-border h-6xl px-[5%] py-md lg:px-[5.5%];
+}
+
+#refreashing.ant-btn {
+	@apply t7 main-filter-border t8 h-6xl h-fit border-0 p-0 shadow-none;
+}
+
+.ant-select-dropdown {
+	@apply t7 h-fit;
+}
+
+.ant-slider .ant-slider-handle::after {
+	@apply bg-[#2495FE];
+}
+.ant-slider .ant-slider-track-1 {
+	@apply bg-[#2495FE];
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
 }
